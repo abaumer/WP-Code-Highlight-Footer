@@ -37,7 +37,8 @@ function wp_code_highlight_style(){
 	}
 	echo '<link rel="stylesheet" type="text/css" href="'.$wp_code_highlight_css_url.'" media="screen" />' . "\n";
 }
-add_action("wp_head",'wp_code_highlight_style');
+// ABAUMER - move styles to footer
+add_action("wp_footer",'wp_code_highlight_style');
 
 function wp_code_highlight_js(){
 	$wp_code_highlight_js_url = plugins_url('/js/wp-code-highlight.js', __FILE__);
